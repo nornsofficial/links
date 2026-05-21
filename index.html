@@ -13,20 +13,21 @@
         .font-gotu { font-family: 'Gotu', sans-serif; }
         .font-k2d { font-family: 'K2D', sans-serif; }
         
+        /* รายการที่ 1: เปลี่ยนสีฐานระบบเวลามือถือเด้งยืด ให้เป็นสีน้ำตาลอบอุ่นนุ่มนวลตามสั่ง */
         html {
-            background-color: #2D1F24; /* อัปเดต: ใช้สีม่วงเข้ม/มะเขือม่วงตามภาพที่ส่งมาล่าสุด */
+            background-color: #8c6c5d;
             margin: 0;
             padding: 0;
         }
         
-        /* สยบบั๊กกล่องท้ายเว็บอย่างถาวร 100% ด้วยการล็อกภาพ bg.png ขยายใหญ่เป็นวอลเปเปอร์อยู่กับที่ */
+        /* สยบบั๊กกล่องท้ายเว็บถาวร ด้วยการล็อกภาพ bg.png ขยายใหญ่เป็นวอลเปเปอร์อยู่กับที่ */
         body::before {
             content: "";
             position: fixed;
-            top: -10vh; /* เผื่อระยะด้านบนสำหรับแถบ URL */
+            top: -10vh;
             left: 0;
             width: 100%;
-            height: 120vh; /* ขยายความสูงเผื่อไว้ 120% เพื่อคลุมพื้นที่เวลาหน้าจอเด้งยืด */
+            height: 120vh;
             background-image: url('bg.png');
             background-size: cover;
             background-position: center center;
@@ -69,18 +70,7 @@
         }
     </style>
 </head>
-<body class="px-4 py-6">
-
-    <div class="w-full max-w-md flex justify-between items-center mb-4">
-        <button class="w-10 h-10 bg-black/20 rounded-full flex items-center justify-center text-white backdrop-blur-md">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-        </button>
-        <button class="w-10 h-10 bg-black/20 rounded-full flex items-center justify-center text-white backdrop-blur-md">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8m-4-6l-4-4-4 4m4-4v13"/></svg>
-        </button>
-    </div>
-
-    <div class="flex flex-col items-center text-center max-w-sm w-full mb-10">
+<body class="px-4 py-12"> <div class="flex flex-col items-center text-center max-w-sm w-full mb-10">
         <div class="w-[96px] h-[96px] rounded-full overflow-hidden border-[3px] border-white/20 shadow-xl mb-6">
             <img src="logo.png" alt="Norns Logo" class="w-full h-full object-cover">
         </div>
@@ -90,14 +80,14 @@
 
     <div class="w-full max-w-md flex flex-col items-center">
 
-        <h2 class="font-k2d text-white text-[16px] mb-6">Order Now :</h2>
+        <h2 class="font-k2d text-white text-[16px] mb-6 font-light">Order Now :</h2>
         <div class="w-full flex flex-col gap-4 mb-10">
 
             <a href="https://shopee.co.th/shop/1546909972" target="_blank" rel="noopener noreferrer" class="link-card w-full rounded-[20px] p-2 flex items-center">
                 <div class="icon-box">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Shopee.svg" class="w-full h-full object-contain">
                 </div>
-                <span class="flex-grow text-center font-k2d text-white text-[14px] font-medium tracking-[2px] ml-[-48px]">SHOPEE</span>
+                <span class="flex-grow text-center font-k2d text-white text-[14px] font-light tracking-[2px] ml-[-48px]">SHOPEE</span>
                 <div class="text-white/40 pr-4">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 16a2 2 0 110 4 2 2 0 010-4zm0-6a2 2 0 110 4 2 2 0 010-4zm0-6a2 2 0 110 4 2 2 0 010-4z"/></svg>
                 </div>
@@ -111,7 +101,7 @@
                         <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.05 1.62 4.2 1.22 1.4 2.97 2.2 4.8 2.41v3.68c-1.28-.17-2.52-.64-3.57-1.37-.6-.42-1.11-.93-1.52-1.53v6.52c-.01 2.28-.73 4.51-2.07 6.35-1.69 2.29-4.32 3.68-7.16 3.73-2.94.02-5.78-1.21-7.6-3.52C-.17 17.58-.33 14.3.77 11.66c1.02-2.45 3.19-4.34 5.79-4.99v3.74c-1.58.4-2.96 1.48-3.66 2.95-.78 1.63-.64 3.6.43 5.09 1.09 1.48 2.9 2.3 4.73 2.14 2.13-.15 3.93-1.84 4.11-3.97.07-.63.05-1.27.05-1.9V0h.31z" fill="#000000"></path>
                     </svg>
                 </div>
-                <span class="flex-grow text-center font-k2d text-white text-[14px] font-medium tracking-[2px] ml-[-48px]">TIKTOK</span>
+                <span class="flex-grow text-center font-k2d text-white text-[14px] font-light tracking-[2px] ml-[-48px]">TIKTOK</span>
                 <div class="text-white/40 pr-4">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 16a2 2 0 110 4 2 2 0 010-4zm0-6a2 2 0 110 4 2 2 0 010-4zm0-6a2 2 0 110 4 2 2 0 010-4z"/></svg>
                 </div>
@@ -126,7 +116,7 @@
                     </svg>
                     <span class="text-[6.5px] font-bold text-[#06C755] uppercase tracking-tighter leading-none whitespace-nowrap mt-0.5 scale-90">Line Shopping</span>
                 </div>
-                <span class="flex-grow text-center font-k2d text-white text-[14px] font-medium tracking-[2px] ml-[-48px]">LINE SHOPPING</span>
+                <span class="flex-grow text-center font-k2d text-white text-[14px] font-light tracking-[2px] ml-[-48px]">LINE SHOPPING</span>
                 <div class="text-white/40 pr-4">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 16a2 2 0 110 4 2 2 0 010-4zm0-6a2 2 0 110 4 2 2 0 010-4zm0-6a2 2 0 110 4 2 2 0 010-4z"/></svg>
                 </div>
@@ -134,14 +124,14 @@
 
         </div>
 
-        <h2 class="font-k2d text-white text-[16px] mb-6">More about us :</h2>
+        <h2 class="font-k2d text-white text-[16px] mb-6 font-light">More about us :</h2>
         <div class="w-full flex flex-col gap-4">
 
             <a href="https://www.facebook.com/share/1EBRQjye1F/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="link-card w-full rounded-[20px] p-2 flex items-center">
                 <div class="icon-box">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" class="w-full h-full object-contain p-1">
                 </div>
-                <span class="flex-grow text-center font-k2d text-white text-[14px] font-medium tracking-[2px] ml-[-48px]">FACEBOOK</span>
+                <span class="flex-grow text-center font-k2d text-white text-[14px] font-light tracking-[2px] ml-[-48px]">FACEBOOK</span>
                 <div class="text-white/40 pr-4">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 16a2 2 0 110 4 2 2 0 010-4zm0-6a2 2 0 110 4 2 2 0 010-4zm0-6a2 2 0 110 4 2 2 0 010-4z"/></svg>
                 </div>
@@ -151,7 +141,7 @@
                 <div class="icon-box">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" class="w-full h-full object-contain p-1">
                 </div>
-                <span class="flex-grow text-center font-k2d text-white text-[14px] font-medium tracking-[2px] ml-[-48px]">INSTAGRAM</span>
+                <span class="flex-grow text-center font-k2d text-white text-[14px] font-light tracking-[2px] ml-[-48px]">INSTAGRAM</span>
                 <div class="text-white/40 pr-4">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 16a2 2 0 110 4 2 2 0 010-4zm0-6a2 2 0 110 4 2 2 0 010-4zm0-6a2 2 0 110 4 2 2 0 010-4z"/></svg>
                 </div>
@@ -161,7 +151,7 @@
                 <div class="icon-box">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" class="w-full h-full object-contain p-0.5">
                 </div>
-                <span class="flex-grow text-center font-k2d text-white text-[14px] font-medium tracking-[2px] ml-[-48px]">LINE OA: Add Friend</span>
+                <span class="flex-grow text-center font-k2d text-white text-[14px] font-light tracking-[2px] ml-[-48px]">LINE OA: Add Friend</span>
                 <div class="text-white/40 pr-4">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 16a2 2 0 110 4 2 2 0 010-4zm0-6a2 2 0 110 4 2 2 0 010-4zm0-6a2 2 0 110 4 2 2 0 010-4z"/></svg>
                 </div>
