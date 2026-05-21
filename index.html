@@ -13,24 +13,38 @@
         .font-gotu { font-family: 'Gotu', sans-serif; }
         .font-k2d { font-family: 'K2D', sans-serif; }
         
-        /* ถมสีฐานระบบให้คุมโทนน้ำตาลอุ่น เวลาหน้าจอมือถือยืดเด้งหลุดขอบ แถบขาวจะหายไป 100% */
+        /* ใส่ภาพพื้นหลังให้โครงสร้างใหญ่สุด เพื่อรองรับเอฟเฟกต์หน้าจอเด้งยืด (Overscroll) */
         html {
+            background-image: url('bg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             background-color: #29201d;
             overscroll-behavior: none;
             overscroll-behavior-y: none;
         }
         
-        /* คืนค่าภาพพื้นหลัง bg.png ตัวเดิมแบบออริจินัล คมชัด นุ่มนวล */
         body {
-            background-image: url('bg.png');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
             margin: 0;
             padding: 0;
             width: 100%;
             min-height: 100vh;
+            position: relative;
+        }
+
+        /* เทคนิคกล่องฉากหลังล็อกนิ่งเสถียร แทนคำสั่งเก่าที่บั๊กบนมือถือ การันตีเห็น bg.png เต็มผืนตลอดเวลา */
+        .fixed-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('bg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -10;
+            pointer-events: none;
         }
 
         .link-card {
@@ -58,6 +72,8 @@
     </style>
 </head>
 <body class="flex flex-col items-center px-4 py-6">
+
+    <div class="fixed-bg"></div>
 
     <div class="w-full max-w-md flex justify-between items-center mb-4">
         <button class="w-10 h-10 bg-black/20 rounded-full flex items-center justify-center text-white backdrop-blur-md">
@@ -125,40 +141,4 @@
         <h2 class="font-k2d text-white text-[16px] mb-6">More about us :</h2>
         <div class="w-full flex flex-col gap-4">
 
-            <a href="https://www.facebook.com/share/1EBRQjye1F/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="link-card w-full rounded-[20px] p-2 flex items-center">
-                <div class="icon-box">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" class="w-full h-full object-contain p-1">
-                </div>
-                <span class="flex-grow text-center font-k2d text-white text-[14px] font-medium tracking-[2px] ml-[-48px]">FACEBOOK</span>
-                <div class="text-white/40 pr-4">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 16a2 2 0 110 4 2 2 0 010-4zm0-6a2 2 0 110 4 2 2 0 010-4zm0-6a2 2 0 110 4 2 2 0 010-4z"/></svg>
-                </div>
-            </a>
-
-            <a href="https://www.instagram.com/norns_th.official/" target="_blank" rel="noopener noreferrer" class="link-card w-full rounded-[20px] p-2 flex items-center">
-                <div class="icon-box">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" class="w-full h-full object-contain p-1">
-                </div>
-                <span class="flex-grow text-center font-k2d text-white text-[14px] font-medium tracking-[2px] ml-[-48px]">INSTAGRAM</span>
-                <div class="text-white/40 pr-4">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 16a2 2 0 110 4 2 2 0 010-4zm0-6a2 2 0 110 4 2 2 0 010-4zm0-6a2 2 0 110 4 2 2 0 010-4z"/></svg>
-                </div>
-            </a>
-
-            <a href="https://lin.ee/PFFhHjd" target="_blank" rel="noopener noreferrer" class="link-card w-full rounded-[20px] p-2 flex items-center">
-                <div class="icon-box">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" class="w-full h-full object-contain p-0.5">
-                </div>
-                <span class="flex-grow text-center font-k2d text-white text-[14px] font-medium tracking-[2px] ml-[-48px]">LINE OA: Add Friend</span>
-                <div class="text-white/40 pr-4">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 16a2 2 0 110 4 2 2 0 010-4zm0-6a2 2 0 110 4 2 2 0 010-4zm0-6a2 2 0 110 4 2 2 0 010-4z"/></svg>
-                </div>
-            </a>
-
-        </div>
-    </div>
-
-    <div class="h-20"></div>
-
-</body>
-</html>
+            <a href="
