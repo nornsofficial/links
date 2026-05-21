@@ -13,12 +13,25 @@
         .font-gotu { font-family: 'Gotu', sans-serif; }
         .font-k2d { font-family: 'K2D', sans-serif; }
         
+        /* แก้ไขปัญหาแถบสีขาวและล็อกภาพพื้นหลังให้เป๊ะทุกอุปกรณ์ */
         body {
+            background-color: #221a17; /* สีน้ำตาลเข้มสำรองคุมโทนเวลาหน้าจอยืดเด้ง */
+            margin: 0;
+            padding: 0;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background-image: url('bg.png');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
             background-repeat: no-repeat;
+            z-index: -1;
         }
 
         .link-card {
@@ -81,7 +94,7 @@
 
             <a href="https://www.tiktok.com/@norns_th.official" target="_blank" rel="noopener noreferrer" class="link-card w-full rounded-[20px] p-2 flex items-center">
                 <div class="icon-box">
-                    <svg class="w-7 h-7 text-black" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.05 1.62 4.2 1.22 1.4 2.97 2.2 4.8 2.41v3.68c-1.28-.17-2.52-.64-3.57-1.37-.6-.42-1.11-.93-1.52-1.53v6.52c-.01 2.28-.73 4.51-2.07 6.35-1.69 2.29-4.32 3.68-7.16 3.73-2.94.02-5.78-1.21-7.6-3.52C-.17 17.58-.33 14.3.77 11.66c1.02-2.45 3.19-4.34 5.79-4.99v3.74c-1.58.4-2.96 1.48-3.66 2.95-.78 1.63-.64 3.6.43 5.09 1.09 1.48 2.9 2.3 4.73 2.14 2.13-.15 3.93-1.84 4.11-3.97.07-.63.05-1.27.05-1.9V0h.31z"/></svg>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/TikTok_logo.svg" class="w-full h-full object-contain p-0.5">
                 </div>
                 <span class="flex-grow text-center font-k2d text-white text-[14px] font-medium tracking-[2px] ml-[-48px]">TIKTOK</span>
                 <div class="text-white/40 pr-4">
@@ -91,7 +104,11 @@
 
             <a href="https://shop.line.me/@norns_th.official" target="_blank" rel="noopener noreferrer" class="link-card w-full rounded-[20px] p-2 flex items-center">
                 <div class="icon-box">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" class="w-full h-full object-contain p-0.5">
+                    <svg class="w-full h-full object-contain p-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 9V7C17 4.24 14.76 2 12 2C9.24 2 7 4.24 7 9" stroke="#06C755" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M4 8.5C4 7.67 4.67 7 5.5 7H18.5C19.33 7 20 7.67 20 8.5V18.5C20 19.88 18.88 21 17.5 21H6.5C5.12 21 4 19.88 4 18.5V8.5Z" fill="#06C755"/>
+                        <path d="M9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
                 </div>
                 <span class="flex-grow text-center font-k2d text-white text-[14px] font-medium tracking-[2px] ml-[-48px]">LINE SHOPPING</span>
                 <div class="text-white/40 pr-4">
