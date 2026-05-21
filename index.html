@@ -2,7 +2,7 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Norns Thailand Official</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,11 +13,15 @@
         .font-gotu { font-family: 'Gotu', sans-serif; }
         .font-k2d { font-family: 'K2D', sans-serif; }
         
-        /* แก้ไขปัญหาแถบสีขาวและล็อกภาพพื้นหลังให้เป๊ะทุกอุปกรณ์ */
-        body {
-            background-color: #221a17; /* สีน้ำตาลเข้มสำรองคุมโทนเวลาหน้าจอยืดเด้ง */
+        /* สยบบั๊กหน้าจอยืดเด้ง ล็อกหน้าเว็บให้นิ่งสนิทแบบพรีเมียมโมบายแอปพลิเคชัน */
+        html, body {
+            overscroll-behavior: none;
+            overscroll-behavior-y: none;
+            background-color: #221a17; /* สีพื้นหลังสำรองคุมโทนอุ่นของแบรนด์ */
             margin: 0;
             padding: 0;
+            width: 100%;
+            height: 100%;
         }
 
         body::before {
@@ -58,7 +62,7 @@
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col items-center px-4 py-6">
+<body class="min-h-screen flex flex-col items-center px-4 py-6 overflow-y-auto">
 
     <div class="w-full max-w-md flex justify-between items-center mb-4">
         <button class="w-10 h-10 bg-black/20 rounded-full flex items-center justify-center text-white backdrop-blur-md">
@@ -93,8 +97,12 @@
             </a>
 
             <a href="https://www.tiktok.com/@norns_th.official" target="_blank" rel="noopener noreferrer" class="link-card w-full rounded-[20px] p-2 flex items-center">
-                <div class="icon-box">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/TikTok_logo.svg" class="w-full h-full object-contain p-0.5">
+                <div class="icon-box p-1.5">
+                    <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.53 0h3.91c.08 1.53.63 3.05 1.62 4.2 1.22 1.4 2.97 2.2 4.8 2.41v3.68c-1.28-.17-2.52-.64-3.57-1.37-.6-.42-1.11-.93-1.52-1.53v6.52c-.01 2.28-.73 4.51-2.07 6.35-1.69 2.29-4.32 3.68-7.16 3.73-2.94.02-5.78-1.21-7.6-3.52C-.17 17.58-.33 14.3.77 11.66c1.02-2.45 3.19-4.34 5.79-4.99v3.74c-1.58.4-2.96 1.48-3.66 2.95-.78 1.63-.64 3.6.43 5.09 1.09 1.48 2.9 2.3 4.73 2.14 2.13-.15 3.93-1.84 4.11-3.97.07-.63.05-1.27.05-1.9V0h.31z" fill="black"/>
+                        <path d="M12.23 0.2h3.91c.08 1.53.63 3.05 1.62 4.2 1.22 1.4 2.97 2.2 4.8 2.41v3.68c-1.28-.17-2.52-.64-3.57-1.37-.6-.42-1.11-.93-1.52-1.53v6.52c-.01 2.28-.73 4.51-2.07 6.35-1.69 2.29-4.32 3.68-7.16 3.73-2.94.02-5.78-1.21-7.6-3.52C-.17 17.78-.33 14.5.77 11.86c1.02-2.45 3.19-4.34 5.79-4.99v3.74c-1.58.4-2.96 1.48-3.66 2.95-.78 1.63-.64 3.6.43 5.09 1.09 1.48 2.9 2.3 4.73 2.14 2.13-.15 3.93-1.84 4.11-3.97.07-.63.05-1.27.05-1.9V0.2z" fill="#FE2C55" style="mix-blend-mode: screen;"/>
+                        <path d="M12.83 -0.2h3.91c.08 1.53.63 3.05 1.62 4.2 1.22 1.4 2.97 2.2 4.8 2.41v3.68c-1.28-.17-2.52-.64-3.57-1.37-.6-.42-1.11-.93-1.52-1.53v6.52c-.01 2.28-.73 4.51-2.07 6.35-1.69 2.29-4.32 3.68-7.16 3.73-2.94.02-5.78-1.21-7.6-3.52C-.17 17.38-.33 14.1.77 11.46c1.02-2.45 3.19-4.34 5.79-4.99v3.74c-1.58.4-2.96 1.48-3.66 2.95-.78 1.63-.64 3.6.43 5.09 1.09 1.48 2.9 2.3 4.73 2.14 2.13-.15 3.93-1.84 4.11-3.97.07-.63.05-1.27.05-1.9V-0.2z" fill="#25F4EE" style="mix-blend-mode: screen;"/>
+                    </svg>
                 </div>
                 <span class="flex-grow text-center font-k2d text-white text-[14px] font-medium tracking-[2px] ml-[-48px]">TIKTOK</span>
                 <div class="text-white/40 pr-4">
@@ -103,12 +111,13 @@
             </a>
 
             <a href="https://shop.line.me/@norns_th.official" target="_blank" rel="noopener noreferrer" class="link-card w-full rounded-[20px] p-2 flex items-center">
-                <div class="icon-box">
-                    <svg class="w-full h-full object-contain p-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17 9V7C17 4.24 14.76 2 12 2C9.24 2 7 4.24 7 9" stroke="#06C755" stroke-width="2" stroke-linecap="round"/>
+                <div class="icon-box flex-col justify-center items-center p-0.5 pt-1">
+                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 9V7C17 4.24 14.76 2 12 2C9.24 2 7 4.24 7 9" stroke="#06C755" stroke-width="2.5" stroke-linecap="round"/>
                         <path d="M4 8.5C4 7.67 4.67 7 5.5 7H18.5C19.33 7 20 7.67 20 8.5V18.5C20 19.88 18.88 21 17.5 21H6.5C5.12 21 4 19.88 4 18.5V8.5Z" fill="#06C755"/>
                         <path d="M9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
                     </svg>
+                    <span class="text-[6.5px] font-bold text-[#06C755] uppercase tracking-tighter leading-none whitespace-nowrap mt-0.5 scale-90">Line Shopping</span>
                 </div>
                 <span class="flex-grow text-center font-k2d text-white text-[14px] font-medium tracking-[2px] ml-[-48px]">LINE SHOPPING</span>
                 <div class="text-white/40 pr-4">
