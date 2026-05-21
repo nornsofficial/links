@@ -13,25 +13,36 @@
         .font-gotu { font-family: 'Gotu', sans-serif; }
         .font-k2d { font-family: 'K2D', sans-serif; }
         
-        /* ตั้งค่าโครงสร้างระบบให้รองรับการ Scroll ได้ลื่นไหลเป็นธรรมชาติ */
         html {
-            background-color: #29201d;
+            background-color: #29201d; /* สีฐานระบบ */
             margin: 0;
             padding: 0;
-            height: 100%;
         }
         
-        /* สยบบั๊ก iOS Safari ด้วยการฝังภาพพื้นหลัง bg.png ให้ครอบคลุมยาวเต็มผืนเอกสาร 100% ไร้ขอบตัด */
-        body {
+        /* สยบบั๊กกล่องน้ำตาลท้ายเว็บอย่างถาวร 100% ด้วยการล็อกภาพ bg.png ขยายใหญ่เป็นวอลเปเปอร์อยู่กับที่ */
+        body::before {
+            content: "";
+            position: fixed;
+            top: -10vh; /* เผื่อระยะด้านบนสำหรับแถบ URL */
+            left: 0;
+            width: 100%;
+            height: 120vh; /* ขยายความสูงเผื่อไว้ 120% เพื่อคลุมพื้นที่เวลาหน้าจอเด้งยืด */
             background-image: url('bg.png');
             background-size: cover;
-            background-position: center top;
+            background-position: center center;
             background-repeat: no-repeat;
-            background-attachment: scroll;
+            z-index: -10;
+            pointer-events: none;
+        }
+        
+        body {
             margin: 0;
             padding: 0;
             width: 100%;
             min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .link-card {
@@ -58,7 +69,7 @@
         }
     </style>
 </head>
-<body class="flex flex-col items-center px-4 py-6">
+<body class="px-4 py-6">
 
     <div class="w-full max-w-md flex justify-between items-center mb-4">
         <button class="w-10 h-10 bg-black/20 rounded-full flex items-center justify-center text-white backdrop-blur-md">
